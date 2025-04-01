@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giới thiệu nhóm</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0d6ff 0%, #a8b5ff 100%);
+            color: #333;
+            margin: 0;
+            padding: 30px;
+            min-height: 100vh;
+            overflow-x: auto; /* Cho phép cuộn ngang nếu cần */
+        }
+        
+        h1 {
+            color: #4a3f7d;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5em;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .team-container {
+            display: flex; /* Chuyển từ grid sang flex */
+            gap: 25px;
+            padding-bottom: 20px; /* Đệm dưới để không bị che thanh cuộn */
+            overflow-x: auto; /* Tạo thanh cuộn ngang khi cần */
+            scroll-snap-type: x proximity; /* Hiệu ứng snap khi cuộn */
+            width: 100%;
+        }
+        
+        .member-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(74, 63, 125, 0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
+            min-width: 350px; /* Chiều rộng tối thiểu mỗi thành viên */
+            scroll-snap-align: start; /* Căn chỉnh khi cuộn */
+            flex-shrink: 0; /* Ngăn không bị co lại */
+        }
+        
+        .member-container:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 12px 25px rgba(74, 63, 125, 0.25);
+            background-color: rgba(255, 255, 255, 1);
+        }
+        
+        .member-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255,255,255,0.7);
+            margin: 0 auto 20px; /* Căn giữa ảnh */
+            display: block;
+            box-shadow: 0 4px 10px rgba(74, 63, 125, 0.2);
+        }
+        
+        .member-info {
+            text-align: center; /* Căn giữa nội dung */
+        }
+        
+        .member-name {
+            color: #5d4bdb;
+            text-transform: uppercase;
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            position: relative;
+        }
+        
+        .member-name:after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #5d4bdb 0%, #a8b5ff 100%);
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+        
+        .member-details {
+            font-size: 0.95em;
+            line-height: 1.7;
+            color: #555;
+            margin-top: 25px;
+        }
+
+        /* Tùy chỉnh thanh cuộn */
+        ::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(168, 181, 255, 0.2);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgba(74, 63, 125, 0.4);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(74, 63, 125, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <h1>THÀNH VIÊN NHÓM</h1>
+    
+    <div class="member-container">
+        <img src="https://assets.onecompiler.app/43des2zhu/43derbun5/z6460448035223_013924c0df7a68ff908ec25cdea01aef.jpg" alt="Nguyễn Thế Bảo" class="member-image">
+          <div class="member-name">Nguyễn Thế Bảo</div>
+          <div class="member-details">
+              Biết đánh đàn, yêu thích âm nhạc cổ điển, hay đọc sách self-help, thích chơi game open-world.
+              Hướng tới đại học Hoa Lư.
+          </div>
+      </div>
+      <div class="member-container">
+        <img src="https://assets.onecompiler.app/43des2zhu/43derbun5/z6460448038780_b26477792b7fa217c5c4fc0106902d97.jpg" alt="Phạm Văn Kiên" class="member-image">
+          <div class="member-name">Phạm Văn Kiên</div>
+          <div class="member-details">
+              Thành thạo các bộ môn khoa học tự nhiên ở trường.
+              Có niềm ưa thích đối với các trò chơi mang tính chiến thuật.
+          </div>
+      </div>
+      <div class="member-container">
+        <img src="https://assets.onecompiler.app/43des2zhu/43derbun5/z6460448057935_d32349eb3bd3aed5c716186b88d64732.jpg" alt="Đỗ Hoàng Nguyên" class="member-image">
+          <div class="member-name">Đỗ Hoàng Nguyên</div>
+          <div class="member-details">
+              Không ai biết anh ta là ai, một kẻ bí ẩn thiên tài.
+              Có thể đi bộ đến mức lạc vào không gian 4 chiều.
+          </div>
+      </div>
+  
+      <div class="member-container">
+        <img src="https://assets.onecompiler.app/43des2zhu/43derbun5/z6460448051706_7eae4be656dc4a8e227d6d15b2acd14d.jpg" alt="Trần Viết Xuân" class="member-image">
+          <div class="member-name">Trần Viết Xuân</div>
+          <div class="member-details">
+              Người quản lý kiêm bộ phận nhân sự lao động của công ty 12A7.
+              Đối thủ khắc chế Hoàng Nguyên ở 12A7.
+          </div>
+      </div>
+</body>
+</html>
