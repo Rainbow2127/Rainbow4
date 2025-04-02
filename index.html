@@ -9,7 +9,7 @@
             --primary-color: #5d4bdb;
             --secondary-color: #a8b5ff;
             --text-dark: #4a3f7d;
-            --text-light: #f8f8ff;
+            --text-light: #ffffff;
         }
 
         body {
@@ -54,6 +54,9 @@
             min-width: 350px;
             scroll-snap-align: start;
             flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .member-container:hover {
@@ -75,6 +78,7 @@
         
         .member-info {
             text-align: center;
+            width: 100%;
         }
         
         .member-name {
@@ -106,6 +110,29 @@
             color: #555;
             margin-top: 25px;
             padding: 0 10px;
+            margin-bottom: 20px;
+        }
+
+        .member-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            box-shadow: 0 4px 8px rgba(93, 75, 219, 0.2);
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .member-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(93, 75, 219, 0.3);
+            background: linear-gradient(135deg, #4f3dc8 0%, #8d9df8 100%);
         }
 
         /* Tùy chỉnh thanh cuộn */
@@ -148,6 +175,12 @@
             
             h1 {
                 font-size: 2em;
+                margin-bottom: 30px;
+            }
+            
+            .member-link {
+                padding: 8px 16px;
+                font-size: 0.9em;
             }
         }
     </style>
@@ -164,6 +197,7 @@
                     Biết đánh đàn, yêu thích âm nhạc cổ điển, hay đọc sách self-help, thích chơi game open-world.
                     Hướng tới đại học Hoa Lư.
                 </div>
+                <a href="https://www.facebook.com/profile.php?id=100050083121324" class="member-link" target="_blank" rel="noopener noreferrer">Xem Facebook</a>
             </div>
         </div>
         
@@ -175,6 +209,7 @@
                     Thành thạo các bộ môn khoa học tự nhiên ở trường.
                     Có niềm ưa thích đối với các trò chơi mang tính chiến thuật.
                 </div>
+                <a href="https://www.facebook.com/share/1BrB5TxEEe" class="member-link" target="_blank" rel="noopener noreferrer">Xem Facebook</a>
             </div>
         </div>
         
@@ -186,6 +221,7 @@
                     Không ai biết anh ta là ai, một kẻ bí ẩn thiên tài.
                     Có thể đi bộ đến mức lạc vào không gian 4 chiều. Ước mơ trở thành nhà ảo thuật gia.
                 </div>
+                <a href="https://www.facebook.com/share/1LK9jQTnmJ" class="member-link" target="_blank" rel="noopener noreferrer">Xem Facebook</a>
             </div>
         </div>
         
@@ -197,12 +233,13 @@
                     Người quản lý kiêm bộ phận nhân sự lao động của công ty 12A7.
                     Đối thủ khắc chế Hoàng Nguyên ở 12A7.
                 </div>
+                <a href="https://www.facebook.com/share/15CPDuwvgr" class="member-link" target="_blank" rel="noopener noreferrer">Xem Facebook</a>
             </div>
         </div>
     </div>
 
     <footer>
-        © 2025  Nhóm 12A7 - Trường THPT Nguyễn Huệ
+        © 2023 Nhóm 12A7 - Trường THPT Chuyên Hạ Long
     </footer>
 </body>
 </html>
