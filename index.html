@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu nhóm 12A7</title>
+    <style>
+        :root {
+            --primary-color: #5d4bdb;
+            --secondary-color: #a8b5ff;
+            --text-dark: #4a3f7d;
+            --text-light: #f8f8ff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0d6ff 0%, #a8b5ff 100%);
+            color: #333;
+            margin: 0;
+            padding: 30px;
+            min-height: 100vh;
+            overflow-x: auto;
+        }
+        
+        h1 {
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5em;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .team-container {
+            display: flex;
+            gap: 25px;
+            padding-bottom: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x proximity;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .member-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(74, 63, 125, 0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
+            min-width: 350px;
+            scroll-snap-align: start;
+            flex-shrink: 0;
+        }
+        
+        .member-container:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 12px 25px rgba(74, 63, 125, 0.25);
+            background-color: rgba(255, 255, 255, 1);
+        }
+        
+        .member-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255,255,255,0.7);
+            margin: 0 auto 20px;
+            display: block;
+            box-shadow: 0 4px 10px rgba(74, 63, 125, 0.2);
+        }
+        
+        .member-info {
+            text-align: center;
+        }
+        
+        .member-name {
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-size: 1.4em;
+            margin-bottom: 25px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            position: relative;
+        }
+        
+        .member-name:after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+        
+        .member-details {
+            font-size: 1em;
+            line-height: 1.7;
+            color: #555;
+            margin-top: 25px;
+            padding: 0 10px;
+        }
+
+        /* Tùy chỉnh thanh cuộn */
+        ::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(168, 181, 255, 0.2);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgba(74, 63, 125, 0.4);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(74, 63, 125, 0.6);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: var(--text-dark);
+            font-size: 0.9em;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .member-container {
+                min-width: 300px;
+                padding: 25px;
+            }
+            
+            .member-image {
+                width: 120px;
+                height: 120px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>THÀNH VIÊN NHÓM 12A7</h1>
+    
+    <div class="team-container">
+        <div class="member-container">
+            <img src="https://assets.onecompiler.app/43des2zhu/43derbun5/z6460448035223_013924c0df7a68ff908ec25cdea01aef.jpg" alt="Nguyễn Thế Bảo" class="member-image">
+            <div class="member-info">
+                <div class="member-name">Nguyễn Thế Bảo</div>
+                <div class="member-details">
+                    Biết đánh đàn, yêu thích âm nhạc cổ điển, hay đọc sách self-help, thích chơi game open-world.
+                    Hướng tới đại học Hoa Lư.
+                </div>
+            </div>
+        </div>
+        
+        <div class="member-container">
+            <img src="https://assets.onecompiler.app/43des2zhu/43derbun5/z6460448038780_b26477792b7fa217c5c4fc0106902d97.jpg" alt="Phạm Văn Kiên" class="member-image">
+            <div class="member-info">
+                <div class="member-name">Phạm Văn Kiên</div>
+                <div class="member-details">
+                    Thành thạo các bộ môn khoa học tự nhiên ở trường.
+                    Có niềm ưa thích đối với các trò chơi mang tính chiến thuật.
+                </div>
+            </div>
+        </div>
+        
+        <div class="member-container">
+            <img src="https://assets.onecompiler.app/43des2zhu/43derbun5/z6460448057935_d32349eb3bd3aed5c716186b88d64732.jpg" alt="Đỗ Hoàng Nguyên" class="member-image">
+            <div class="member-info">
+                <div class="member-name">Đỗ Hoàng Nguyên</div>
+                <div class="member-details">
+                    Không ai biết anh ta là ai, một kẻ bí ẩn thiên tài.
+                    Có thể đi bộ đến mức lạc vào không gian 4 chiều. Ước mơ trở thành nhà ảo thuật gia.
+                </div>
+            </div>
+        </div>
+        
+        <div class="member-container">
+            <img src="https://assets.onecompiler.app/43des2zhu/43derbun5/z6460448051706_7eae4be656dc4a8e227d6d15b2acd14d.jpg" alt="Trần Viết Xuân" class="member-image">
+            <div class="member-info">
+                <div class="member-name">Trần Viết Xuân</div>
+                <div class="member-details">
+                    Người quản lý kiêm bộ phận nhân sự lao động của công ty 12A7.
+                    Đối thủ khắc chế Hoàng Nguyên ở 12A7.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2023 Nhóm 12A7 - Trường THPT Nguyễn HuệHuệ
+    </footer>
+</body>
+</html>
